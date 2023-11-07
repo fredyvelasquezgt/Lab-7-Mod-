@@ -41,8 +41,15 @@ for i in range(n_estratos):
 
     valores_esperados_estratos[i] = sum(valores) / n  # Calcula el valor esperado del estrato
 
+# Imprime los valores esperados de los estratos con saltos de línea
+for i, valor_estrato in enumerate(valores_esperados_estratos):
+    limite_inferior = limites_estratos[i]
+    limite_superior = limites_estratos[i + 1] if i < n_estratos - 1 else "∞"
+    print(f"Valor esperado para el estrato {limite_inferior} a {limite_superior}: {valor_estrato}")
+
+
 # Calcula el valor esperado total promediando los valores de los estratos
 valor_esperado_total = sum(valores_esperados_estratos) / n_estratos
 
 # Imprime el resultado
-print("\nValor esperado total:\n", valor_esperado_total, "\n")
+print("\nValor esperado total:", valor_esperado_total)
