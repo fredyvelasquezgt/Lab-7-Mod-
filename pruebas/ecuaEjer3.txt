@@ -1,0 +1,23 @@
+La ecuación define el generador congruencial lineal (LCG por sus siglas en inglés). La ecuación general del LCG es la siguiente:
+
+[X_{n+1} = (a * X_n + c) mod m]
+
+Donde:
+
+- X_{n+1} es el próximo valor pseudoaleatorio generado.
+- X_n es el valor actual de la secuencia de números pseudoaleatorios.
+- (a) es el multiplicador.
+- (c) es el incremento.
+- (m) es el módulo.
+
+SEED representa el valor actual (X_n)
+"a" es el multiplicador
+"c" es el incremento 
+"m" es el módulo. 
+
+La ecuación se utiliza en la función "generar_numero_aleatorio" para calcular el próximo valor pseudoaleatorio y actualizar la semilla.
+
+El módulo (m) se utiliza para asegurarse de que los números generados estén dentro del rango [0, 1}
+y también para garantizar que los valores sean periódicos (la secuencia de números se repite después de 
+un cierto número de iteraciones). El multiplicador (a) y el incremento (c) se eligen de manera que el generador 
+sea eficiente y produzca una secuencia de números pseudoaleatorios con buenas propiedades estadísticas.
